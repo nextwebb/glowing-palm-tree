@@ -5,7 +5,7 @@ from .views import UserViewSet
 
 router = routers.DefaultRouter()
 router.register('users/signup', UserViewSet)
-# router.register('characters', CharacterViewSet)
+router.register('characters', CharacterViewSet)
 # router.register('favourites', FavouritesViewSet)
 
 
