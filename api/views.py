@@ -8,6 +8,7 @@ import requests
 import os
 from .serializers import UserRegistrationSerializers
 from rest_framework.authentication import TokenAuthentication
+from decouple import config
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -38,12 +39,12 @@ class CharacterViewSet(viewsets.ModelViewSet):
             if request.user:
                 try:
                     user = request.user
-                    r = requests.get(
-                        'https://api.github.com/user',  auth=BearerAuth('3pVzwec1Gs1m'))
-
-                    print(r)
+                    ACCESS_KEY = config('API_ACCESS_KEY')
+                    response = requests.get(
+                        'https://the-one-api.dev/v2/character',  auth=BearerAuth(ACCESS_KEY))
+                    # print(response.json())
                     response = {
-                        'message': 'You cant  list or retrieve users Profile like this'}
+                        'message': response.json()}
                     return Response(response, status=status.HTTP_200_OK)
                 except IndexError:
                     response = {

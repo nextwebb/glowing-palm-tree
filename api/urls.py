@@ -6,6 +6,8 @@ from .views import UserViewSet, CharacterViewSet
 router = routers.DefaultRouter()
 router.register('auth/signup', UserViewSet)
 router.register('characters', CharacterViewSet, basename='characterModel')
+router.register('characters/<var>/quotes', CharacterViewSet,
+                basename='characterModel')
 # router.register('favourites', FavouritesViewSet)
 
 
