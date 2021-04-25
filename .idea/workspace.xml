@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07be8ff3-9f3f-4d13-976e-aae9f8289021" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devcentertest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devcentertest/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devcentertest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/devcentertest/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +38,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Django Server.glowing-palm-tree">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="glowing-palm-tree" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619070632135</updated>
       <workItem from="1619070635123" duration="2704000" />
-      <workItem from="1619096719855" duration="609000" />
+      <workItem from="1619096719855" duration="967000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,11 @@
 from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
-from .views import UserViewSet
+from .views import UserViewSet, CharacterViewSet
 
 router = routers.DefaultRouter()
-router.register('users/signup', UserViewSet)
-router.register('characters', CharacterViewSet)
+router.register('auth/signup', UserViewSet)
+router.register('characters', CharacterViewSet, basename='characterModel')
 # router.register('favourites', FavouritesViewSet)
 
 
