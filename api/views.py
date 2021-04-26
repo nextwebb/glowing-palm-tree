@@ -80,6 +80,8 @@ class CharacterViewSet(viewsets.ModelViewSet):
                     print(pk)
                     user = request.user
                     ACCESS_KEY = config('API_ACCESS_KEY')
+                    # this api seems to take a while and sometimes timesouts
+                    # needs to be optimized
                     response = requests.get(
                         f'https://the-one-api.dev/v2/character/{pk}/quote',  auth=BearerAuth(ACCESS_KEY))
                     # print(response.json())
