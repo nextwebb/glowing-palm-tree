@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/<version>/', include('api.urls')),
     # django provides a default usermodel
+    # django token authentication
     path('api/<version>/auth/login/', obtain_auth_token),
     path('api/<version>/auth/signup/', UserViewSet)
 
