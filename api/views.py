@@ -14,11 +14,22 @@ from decouple import config
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    serializer_class = UserRegistrationSerializers
+    serializer_class = UserRegistrationSerializers  # used by serializers output
+
+    # this option is used to authenticate a user, thus django can identify the token and its
     authentication_classes = (TokenAuthentication,)
+    # owner
     permission_classes = (AllowAny,)
     versions = ['v1']
 
+# If you are using requests module, an alternative option is to write an auth class,
+
+
+# which allows you to use the same auth argument just like basic auth, and may help you in certain situations.
+
+# and then can you send requests like this
+
+# response = requests.get('https://www.example.com/', auth=BearerAuth('3pVzwec1Gs1m'))
 
 class BearerAuth(requests.auth.AuthBase):
     def __init__(self, token):
@@ -41,9 +52,11 @@ class CharacterViewSet(viewsets.ModelViewSet):
             if request.user:
                 try:
                     user = request.user
+                    # access the key from the environmental variable
                     ACCESS_KEY = config('API_ACCESS_KEY')
                     response = requests.get(
                         'https://the-one-api.dev/v2/character',  auth=BearerAuth(ACCESS_KEY))
+
                     # print(response.json())
                     response = {
                         'message': response.json()}
