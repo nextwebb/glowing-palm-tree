@@ -7,6 +7,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('api/<version>/', include('api.urls')),
-    path('api/<version>/auth/login/', obtain_auth_token)
+    path('api/<version>/auth/login/', obtain_auth_token),
 
 ]
